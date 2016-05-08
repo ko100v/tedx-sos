@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: darkgray;
+}
+
+.content-wrapper {
+    background: white;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 20%;
+    background: black;
+    height: 44px;
+    display: inline-block;
+    background-image: url("../images/tedx-logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.main-nav {
+    width: 100%;
+    height: 60px;
+    background: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.menu {
+    display: inline-block;
+    list-style: none;
+    height: 60px;
+    width: 80%;
+}
+
+.menu-item {
+    float: right;
+    line-height: 60px;
+    min-width: 100px;
+    text-align: center;
+    color: white;
+}
+
+.menu-item:hover {
+    background: red;
+    color: white;
+    cursor: pointer;
+    /*margin-top: 5px;*/
+    box-shadow: 1px 0px 0px black;    
+}
+
+.slider {
+    width: 100%;
+    background-color: white;
+    height: 95%;
+    background-image: url("../images/sample-background.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.section-title {
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.section-content {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.event-element {
+    display: inline-block;
+    width: 31%;
+    height: 70%;
+    background-color: rebeccapurple;  
+    margin: 12px;  
+}
+
+.event-element-image {
+    width: 300px;
+    height: 300px;
+    background: white;
+    border-radius: 50%;
+    margin: 50 auto;
+}
+
+.event-element-title {
+    text-align: center;
+    font-size: 30px;
+}
+
+.event-element-text {
+    margin:25px;
+    font-size: 18px;
+    color: white;
+    text-align: justify;
+}
+
+.speaker {
+    background: white;
+    width: 20%;
+    height: 350px;
+    margin: 20px;
+    position: relative;
+        box-shadow: 1px 1px 1px #333333;    
+
+}
+
+.photo {
+    width: 95%;
+    height: 70%;
+    margin: 8px;
+    background-image: url("../images/konstantin.jpg");
+    background-position: center;
+}
+
+.speaker-name {
+    text-align: center;
+    font-size: 18pt;
+}
+
+.speaker-desc {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.program {
+    width: 60%;
+    background: yellow;
+    margin-top: 20px;
+}
+
+.program-event {
+    width: 100%;
+    height: 200px;
+    background: red;
+    position: relative;
+}
+
+.program-event-line {
+    background: white;
+    width: 2px;
+    height: 96px;
+    margin: 0 auto;
+}
+
+.program-event-hour {
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: transparent;
+    margin: 0 auto;
+    line-height: 100px;
+    font-size: 22px;
+    text-align: center;
+    color: white;
+}
+
+.program-event-description {
+    width: 225px;
+    height: 125px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+}
+
+.program-description-text {
+    width: 80%;
+    height: 100%;
+    background: rebeccapurple;
+    color: white;
+    text-align: center;
+    line-height: 125px;
+    font-size: 22px;
+    word-wrap: break-word;
+    
+}
+
+.program-description-text-position-left {
+    float: left;
+}
+
+.program-description-text-position-right {
+    float: right;
+}
+
+.program-event-description-position-left {
+    left: 50px;
+}
+
+.program-event-description-position-right {
+    right: 50px;
+}
+
+.description-pointer-position-left {
+    left: -15px;
+}
+
+.description-pointer-position-right {
+    float: right;
+    right: -15px;
+}
+
+.description-pointer {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    top: 42px;
+    transform: rotate(45deg);
+    background: white;
+    display: inline-block;
+}
+
+.partners-slider {
+    width: 100%;
+    position: relative;
+}
+
+.team-image {
+    width: 100%;
+    transition: 1s transform linear;
+    transform-origin: 0 0;
+}
+
+.team-image:hover {
+    transform: scale(2);
+}
