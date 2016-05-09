@@ -1,10 +1,22 @@
+@font-face {
+   font-family: 'MarkPro';
+    src: url('../fonts/MarkPro.otf');
+}
+
+
 * {
     margin: 0;
     padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
-    background: darkgray;
+    /*background-image: url("../images/background.png");*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    font-family: 'MarkPro', 'Times New Roman';
+    background: black;    
 }
 
 .content-wrapper {
@@ -18,7 +30,7 @@ body {
     background: black;
     height: 44px;
     display: inline-block;
-    background-image: url("../images/tedx-logo.png");
+    background-image: url("../images/logo.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -49,7 +61,7 @@ body {
 }
 
 .menu-item:hover {
-    background: red;
+    background: #fc5042;
     color: white;
     cursor: pointer;
     /*margin-top: 5px;*/
@@ -59,10 +71,10 @@ body {
 .slider {
     width: 100%;
     background-color: white;
-    height: 95%;
-    background-image: url("../images/sample-background.jpg");
+    height: 75%;
+    background-image: url("../images/fbcover.png");
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -71,6 +83,8 @@ body {
     font-size: 50px;
     text-align: center;
     margin-top: 50px;
+    margin-bottom: 50px;
+
 }
 
 .section-content {
@@ -86,7 +100,6 @@ body {
     display: inline-block;
     width: 31%;
     height: 70%;
-    background-color: rebeccapurple;  
     margin: 12px;  
 }
 
@@ -96,6 +109,27 @@ body {
     background: white;
     border-radius: 50%;
     margin: 50 auto;
+    box-shadow: 1px 1px #333;
+}
+
+.about-image {
+    background-image: url("../images/about.png");
+        background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.logo-image {
+    background-image: url("../images/black-logo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.location-image {
+     background-image: url("../images/location.png");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .event-element-title {
@@ -106,26 +140,62 @@ body {
 .event-element-text {
     margin:25px;
     font-size: 18px;
-    color: white;
+    color: black;
     text-align: justify;
+}
+
+.spearkers-container {
+    background-image: url('../images/wood-back.jpg');
 }
 
 .speaker {
     background: white;
     width: 20%;
-    height: 350px;
+    height: 420px;
     margin: 20px;
     position: relative;
-        box-shadow: 1px 1px 1px #333333;    
+    box-shadow: 1px 1px 1px #333333;
+    transition: 1s all ease;
+    transform-origin: top right;
+}
 
+.speaker:hover {
+    animation-name: myrotation;
+    animation-timing-function: easе;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; 
+    
 }
 
 .photo {
     width: 95%;
     height: 70%;
     margin: 8px;
-    background-image: url("../images/konstantin.jpg");
+    background-image: url("../images/next-speaker.png");
     background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@-webkit-keyframes myrotation {
+    0%   {transform: rotate(0deg);}
+    25%   {transform: rotate(2deg);}
+    50%   {transform: rotate(0deg);}
+    75%   {transform: rotate(-2deg);}
+    100%  {transform: rotate(0deg);}
+} 
+
+.pin {
+    background-image: url("../images/pin-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: -25px;
+    right: -25px;
 }
 
 .speaker-name {
@@ -233,11 +303,191 @@ body {
 }
 
 .team-image {
-    width: 100%;
+    width: 40%;
     transition: 1s transform linear;
-    transform-origin: 0 0;
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+    will-change: transform-origin;
+    background-image: url("../images/team.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .team-image:hover {
     transform: scale(2);
 }
+
+.team-container {
+    background: #3e3e3e;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-member {
+    width: 25%;
+    height: 250px;
+    margin: 50 auto;
+}
+
+.member-photo {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #fc5042;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 2px 2px black;
+}
+
+.member-name {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.boyan {
+    background-image: url('../images/team/boqn.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mariq {
+    background-image: url('../images/team/mariq.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tsveti {
+    background-image: url('../images/team/tsvetelina.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.magi {
+                background-image: url('../images/team/magi.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.duci {
+    background-image: url('../images/team/mihail.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.kostov {
+    background-image: url('../images/team/kostov.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.galq {
+    background-image: url('../images/team/galina.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.uji {
+    background-image: url('../images/team/udji.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.radost {
+    background-image: url('../images/team/radost.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.rali {
+    background-image: url('../images/team/ralica.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.borko {
+    background-image: url('../images/team/boris.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nina {
+    background-image: url('../images/team/nina.JPG');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#contact {width:100%; height:50%; margin: 0 auto; background: #DDD; }
+
+.container {width:100%; height:auto; margin: 0 auto; padding: 50px 0; position: relative;}
+
+#contact .container form input,
+#contact .container form textarea {
+	width:90%;
+	height:30px;
+	padding:5px 10px;
+	font-size: 12px;
+	color:#999;
+	letter-spacing:1px;
+	background: #FFF;
+	border:2px solid #FFF;
+	margin-bottom:25px;
+  -webkit-transition:all .1s ease-in-out;
+	-moz-transition:all .1s ease-in-out;
+	-ms-transition:all .1s ease-in-out;
+	-o-transition:all .1s ease-in-out;
+	transition:all .1s ease-in-out;}
+
+#contact .container form input:focus,
+#contact .container form textarea:focus {
+	border:2px solid #fc5042;
+	color:#999;}
+
+#contact .container form textarea {
+	height:150px;}
+
+#contact .container form .submit {
+	width:90%;
+	padding:5px 10px;
+	font-size: 12px;
+	letter-spacing:1px;
+	background:#fc5042;
+	height:44px;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	color:#FFF;
+    border-radius: 7px;
+	border:2px solid #fc5042;
+  -webkit-transition:all .1s ease-in-out;
+	-moz-transition:all .1s ease-in-out;
+	-ms-transition:all .1s ease-in-out;
+	-o-transition:all .1s ease-in-out;
+	transition:all .1s ease-in-out;}
+    
+
+#contact .container form .submit:hover {
+	color:#FFF;
+	border:2px solid #fc5042;
+	background: #fc5042;
+	cursor:pointer;}
+
+#contact .container form .required {
+	color:#fc5042;}
